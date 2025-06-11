@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
+import { useNavigate } from "react-router-dom"; 
 import Navbar from "../components/Navbar";
 import "../styles/Settings.css";
 import FontContext from "../components/fontcontext";
@@ -6,6 +7,7 @@ import FontContext from "../components/fontcontext";
 function Settings() {
   const { font, setFont } = useContext(FontContext);
   const [taskCount, setTaskCount] = useState(0);
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     document.body.style.fontFamily = font;
@@ -24,7 +26,7 @@ function Settings() {
       localStorage.removeItem("tasks");
       alert("기록이 초기화되었습니다!");
       setTaskCount(0);
-      window.location.reload();
+      navigate(0);
     }
   };
 
