@@ -2,7 +2,7 @@
   "name": "todo",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ycy1031.github.io",
+  "homepage": "https://ycy1031.github.io/todo",
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
