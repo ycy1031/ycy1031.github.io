@@ -1,0 +1,93 @@
+.today-container {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: var(--global-font);
+}
+
+.today-page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.today-task-wrapper {
+  background-color: #e3e3e3;
+  padding: 40px 24px;
+  margin: 40px auto;
+  border-radius: 16px;
+  max-width: 720px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.today-task-box {
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.today-add-task {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.today-add-task input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+}
+
+.today-add-task button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #111;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.today-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.today-task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #3f3f3f;
+  border-radius: 8px;
+}
+
+.today-task-item.done .today-task-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.today-task-text {
+  flex: 1;
+  text-align: left;
+  margin-left: 12px;
+}
+
+.today-task-item button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: gold;
+  cursor: pointer;
+}

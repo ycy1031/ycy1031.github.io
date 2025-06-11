@@ -1,0 +1,74 @@
+.history-container {
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  font-family: var(--global-font);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.history-page-title {
+  font-size: 32px;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+.history-task-wrapper {
+  background-color: #e3e3e3;
+  padding: 40px 24px;
+  margin: 40px auto;
+  border-radius: 16px;
+  max-width: 720px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.history-empty {
+  text-align: center;
+  color: #333;
+  font-size: 16px;
+}
+
+/* ✅ 리스트 전체를 플렉스 그리드 형태로 */
+.history-task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* ✅ 항목 하나당 너비를 반씩 */
+.history-task-item {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  width: calc(50% - 8px); /* 2열 배치 */
+  box-sizing: border-box;
+}
+
+/* ✅ 반응형: 모바일에서는 한 줄씩 */
+@media (max-width: 768px) {
+  .history-task-item {
+    width: 100%;
+  }
+}
+
+.history-task-main {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.history-task-sub {
+  font-size: 13px;
+  color: #666;
+}
