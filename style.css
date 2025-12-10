@@ -1,0 +1,175 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+body {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+/* =========================
+   HERO 전체 프레임
+   ========================= */
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+}
+
+.hero-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("img/b1.svg") center center / cover no-repeat;
+  border: none;
+  overflow: hidden;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.hero-bt {
+  position: absolute;
+  display: block;
+  opacity: 0;
+  animation: hero-fade-up 0.9s ease-out forwards;
+}
+
+.hero-bt1 {
+  left: 3%;
+  top: 5.5%;
+  width: 45%;
+  max-width: 600px;
+  animation-delay: 0.1s;
+}
+
+.hero-bt2 {
+  left: 25%;
+  top: 29%;
+  width: 45%;
+  max-width: 600px;
+  animation-delay: 0.3s;
+}
+
+.hero-bt3 {
+  right: 5%;
+  bottom: 6%;
+  width: 40%;
+  max-width: 480px;
+  animation-delay: 0.6s;
+}
+
+@media (max-width: 900px) {
+  .hero-frame {
+    width: 100vw;
+  }
+
+  .hero-bt1 {
+    left: 4%;
+    top: 16%;
+    width: 65%;
+  }
+
+  .hero-bt2 {
+    left: 22%;
+    top: 40%;
+    width: 55%;
+  }
+
+  .hero-bt3 {
+    right: 6%;
+    bottom: 8%;
+    width: 55%;
+  }
+}
+
+/* 돋보기 */
+.magnifier {
+  position: absolute;
+  pointer-events: none;
+  width: 260px;              
+  height: 260px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 320%;      
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 20;
+}
+
+.zoom-cursor-hidden,
+.zoom-cursor-hidden * {
+  cursor: none !important;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  width: 100vw;
+  padding: 50px 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.footer-inner {
+  width: min(1200px, 90vw);
+  margin-left: clamp(20px, 8vw, 120px);
+  color: #abb094;
+  font-family: "Pretendard", sans-serif;
+  line-height: 1.5;
+  font-weight: 100;
+}
+
+.footer-brand {
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 6px 0;
+  color: #abb094;
+}
+
+.footer-copy {
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/* =========================
+   Scroll Reveal (공통)
+========================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal.delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal.delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal.delay-3 {
+  transition-delay: 0.3s;
+}

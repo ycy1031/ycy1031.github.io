@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>DrowFlow</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="p.css" />
+  <link rel="stylesheet" href="r.css" />
+  <link rel="stylesheet" href="m.css" />
+  <link rel="stylesheet" href="g.css" />
+  <link rel="stylesheet" href="d.css" />
+</head>
+<body>
+<section class="hero">
+  <div class="hero-frame">
+    <img src="img/bt1.svg" alt="DRAW" class="hero-bt hero-bt1">
+    <img src="img/bt2.svg" alt="FLOW" class="hero-bt hero-bt2">
+    <img src="img/bt3.svg" alt="My Drawing Archive" class="hero-bt hero-bt3">
+  </div>
+</section>
+
+<!-- p섹션 -->
+<section class="p-section" id="pSection">
+  <div class="p-inner">
+    <div class="p-left">
+      <div class="p-text-block reveal">
+        <p class="p-title">나이트</p>
+        <p class="p-body">
+          한학기를 끝내고 휴학 후 게임 원화를 배웠었다. 입시 미술 그림만 그리다<br>
+          처음 배워보는 분야라서 신나게 그렸었던 기사. 나의 첫 포트폴리오 그림.
+        </p>
+      </div>
+
+      <div class="p-step-toggle">
+        <button class="p-step-btn" data-step="1">1</button>
+        <button class="p-step-btn" data-step="2">2</button>
+        <button class="p-step-btn" data-step="3">3</button>
+      </div>
+    </div>
+
+    <div class="p-right">
+      <div class="p-image-panel">
+        <img src="img/p1.jpg" alt="step 1" class="p-img" data-img="1">
+        <img src="img/p2.png" alt="step 2" class="p-img" data-img="2">
+        <img src="img/p3.jpg" alt="step 3" class="p-img" data-img="3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="r-section" id="rSection">
+  <div class="r-text reveal">
+    <p class="r-title">얼굴이 궁금한 로봇</p>
+    <p class="r-desc">
+      친구와 만화카페에 놀러가 에반게리온 만화책을 보다 나의 에바를 그려보고<br>
+      싶어 그렸었던 로봇 팔. 팔을 그리며 얼굴을 어떻게 구상할까 고민하는게 즐거웠다.
+    </p>
+  </div>
+
+  <div class="r-images">
+    <div class="r-layer" data-layer="1">
+      <img src="img/r1.png" alt="r1">
+    </div>
+    <div class="r-layer" data-layer="2">
+      <img src="img/r2.png" alt="r2">
+    </div>
+    <div class="r-layer" data-layer="3">
+      <img src="img/r3.png" alt="r3">
+    </div>
+
+    <img src="img/r.png" class="r-img-final" alt="r4">
+  </div>
+
+  <div class="r-toggle">
+    <button type="button" class="r-toggle-btn"></button>
+  </div>
+</section>
+
+<!-- m섹션 -->
+<section class="scratch-section">
+  <div class="top-bar reveal">
+    이미지를 드래그 해보세요
+  </div>
+
+  <div class="scratch-wrap" id="scratchWrap">
+    <img src="img/m3.png" alt="hidden" class="scratch-image m-img zoomable" id="scratchImage" />
+    <canvas id="scratchCanvas"></canvas>
+    <div class="center-label"></div>
+    <button type="button" class="scratch-zoom-toggle" id="scratchZoomToggle">🔍</button>
+  </div>
+
+  <div class="bottom-area reveal">
+    <div class="bottom-right-title">메카닉 오토바이</div>
+    <p class="bottom-right-desc">
+      오토바이를 잘 알진 못하지만 오토바이의 복잡한 구조를 따라그리는 것은 좋아한다.<br />
+      내가 좋아하는 메카닉한 느낌을 섞어 더 밀도있는 오토바이를 그려보고 싶었다.
+    </p>
+  </div>
+</section>
+
+<!-- g섹션 -->
+<section class="g-section" id="gSection">
+  <div class="g-inner">
+    <div class="g-left reveal">
+      <p class="g-inline-text">
+        그림 조각을 모아 퍼즐을 완성 해보세요
+      </p>
+    </div>
+
+    <div class="g-left2 reveal">
+      <div class="g-desc-box" id="gDescBox">
+        <h3>메카닉 총</h3>
+        <p>
+          총도 오토바이와 같은 맥락으로 복잡스러운 외형이 좋다.<br>
+          어디에 쓸 수 있을진 모르겠지만 세상에서 제일 무거운 총 일듯 하다.
+        </p>
+      </div>
+    </div>
+
+    <div class="g-board">
+      <div class="g-canvas" id="gCanvas">
+        <img src="img/g.png" class="g-main-img" alt="main">
+      </div>
+
+      <div class="g-piece" data-id="1"><img src="img/g1.png" alt="piece1"></div>
+      <div class="g-piece" data-id="2"><img src="img/g2.png" alt="piece2"></div>
+      <div class="g-piece" data-id="3"><img src="img/g3.png" alt="piece3"></div>
+      <div class="g-piece" data-id="4"><img src="img/g4.png" alt="piece4"></div>
+      <div class="g-piece" data-id="5"><img src="img/g5.png" alt="piece5"></div>
+      <div class="g-piece" data-id="6"><img src="img/g6.png" alt="piece6"></div>
+      <div class="g-piece" data-id="7"><img src="img/g7.png" alt="piece7"></div>
+      <div class="g-piece" data-id="8"><img src="img/g8.png" alt="piece8"></div>
+    </div>
+  </div>
+</section>
+
+<!-- d섹션 -->
+<section class="d-section" id="dSection">
+  <div class="d-inner">
+    <div class="d-image-wrap">
+      <img src="img/d1.png" alt="step1" class="d-img" data-step="1">
+      <img src="img/d2.png" alt="step2" class="d-img" data-step="2">
+      <img src="img/d3.png" alt="step3" class="d-img zoomable" data-step="3">
+    </div>
+
+    <div class="d-right">
+      <div class="d-text-card reveal">
+        <h3>?</h3>
+        <p>
+          아직 이름을 정하지 못한 무서운 용.<br>
+          나의 최애 애니메이션인 '센과 치히로의 행방불명'<br>
+          의 주인공인 하쿠를 생각하며 그려 본 용의 얼굴.
+        </p>
+      </div>
+
+      <div class="d-slider">
+        <div class="d-slider-track">
+          <div class="d-slider-handle" id="dSliderHandle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p class="footer-brand">DrowFlow</p>
+    <p class="footer-copy">© 2025 DrowFlow. All rights reserved</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="gscript.js"></script>
+<script src="stroke.js"></script>
+</body>
+</html>

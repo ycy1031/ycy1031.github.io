@@ -1,0 +1,137 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+body {
+  font-family: 'Pretendard', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+}
+
+.r-section {
+  width: 100vw;
+  padding: 80px 0 120px;
+  background: #abb094;
+  text-align: center;
+  color: #fff;
+  font-family: Pretendard;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.r-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.r-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.r-images {
+  position: relative;
+  width: min(1100px, 90vw);
+  margin: 0 auto;
+  height: 450px;
+}
+
+/* 각 레이어 컨테이너 */
+.r-layer {
+  position: absolute;
+  height: 100%;
+  left: 55%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  opacity: 0.5;
+  transition: opacity 0.35s ease, margin-left 0.35s ease;
+}
+
+.r-layer img {
+  height: 100%;
+  width: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.r-layer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(171,176,148,0) 10%,
+    rgba(171,176,148,0.85) 100%
+  );
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.r-layer[data-layer="1"] { margin-left: -350px; z-index: 1; }
+.r-layer[data-layer="2"] { margin-left:    0px; z-index: 2; }
+.r-layer[data-layer="3"] { margin-left:  350px; z-index: 3; }
+
+.r-layer:hover {
+  opacity: 1;
+  z-index: 10;
+}
+
+.r-layer:hover::after {
+  opacity: 0;
+}
+
+.r-images:hover .r-layer:not(:hover) {
+  opacity: 0.1;
+}
+
+/* merge 상태 */
+.r-layer.align {
+  margin-left: 0;
+  opacity: 1;
+}
+
+/* r4 (최상단 완성본) */
+.r-img-final {
+  position: absolute;
+  height: 120%;
+  object-fit: cover;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 20;
+  pointer-events: none;
+}
+
+/* toggle */
+.r-toggle {
+  position: absolute;
+  bottom: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.r-toggle-btn {
+  pointer-events: auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.r-toggle-btn:hover {
+  transform: translateY(-2px);
+}
+
+.r-toggle-btn.is-on {
+  background: #fff;
+}
